@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvvsl3oq8aado"]
+
+[ext_resource type="Shader" path="res://vertex shaders/ondulateCode.gdshader" id="1_gj5k6"]
+[ext_resource type="Texture2D" uid="uid://dvc7qa2j3v2l6" path="res://icon.svg" id="1_o52a5"]
+[ext_resource type="Shader" uid="uid://cyuteiwdaxm7u" path="res://vertex shaders/ondulate.tres" id="2_giyr7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ubx4l"]
+shader = ExtResource("1_gj5k6")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pc7vu"]
+shader = ExtResource("2_giyr7")
+
+[node name="VertexShader2D" type="Node2D"]
+
+[node name="Sprite2D_w_code" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ubx4l")
+position = Vector2(776, 289)
+texture = ExtResource("1_o52a5")
+
+[node name="Sprite2D_w_visual_blocks" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_pc7vu")
+position = Vector2(358, 292)
+texture = ExtResource("1_o52a5")
